@@ -14,7 +14,7 @@ set cpo-=C
 
 CompilerSet makeprg=helm\ lint
 
-CompilerSet errorformat=[ERROR]%.%#template:\ %f:%l:\ %m
+CompilerSet errorformat=[ERROR]%.%#template:\ %*[a-zA-Z-]/%f:%l:\ %m,%-G%.%
 
 let &cpo = s:cpo_save
 unlet s:cpo_save

@@ -1,1 +1,3 @@
-autocmd BufRead,BufNewFile */templates/*.yaml,*/templates/*.tpl,*/values.yaml set ft=helm
+autocmd BufNewFile,BufRead */templates/*.yaml setlocal filetype=helm
+autocmd BufNewFile,BufRead */templates/*.tpl setlocal filetype=helm
+autocmd BufNewFile,BufRead *values.yaml setlocal filetype=helm
