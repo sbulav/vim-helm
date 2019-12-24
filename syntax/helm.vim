@@ -88,4 +88,7 @@ hi def link gotplAction PreProc
 hi def link goTplComment Comment
 let b:current_syntax = "helm"
 
+" Use # to comment strings
+setlocal commentstring=#\ %s
+
 " vim: sw=2 ts=2 et
