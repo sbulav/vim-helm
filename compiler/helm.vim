@@ -13,8 +13,13 @@ let s:cpo_save = &cpo
 set cpo-=C
 
 CompilerSet makeprg=helm\ lint
-
-CompilerSet errorformat=[ERROR]%.%#template:\ %*[a-zA-Z-]/%f:%l:\ %m,%-G%.%
+" Ignore lines beginning with '#'
+CompilerSet errorformat =%-G#\ %.%#
+CompilerSet errorformat+=[ERROR]%.%#template:\ %*[a-zA-Z-]/%f:%l:\ %m
+CompilerSet errorformat+=[ERROR]%.%#template:\ %*[a-zA-Z-]/%f:%l:\ %m
+CompilerSet errorformat+=[ERROR]\ %f:\ %m
+" All lines not matching any of the above patterns are ignored
+CompilerSet errorformat+=%-G%.%#
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
